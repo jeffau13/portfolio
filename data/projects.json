@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Proj1",
+    "slug": "project-1",
+    "url": "https://google.com",
+    "image": "./images/project1.jpg",
+    "desc": "i made a search engine!"
+  },
+  {
+    "title": "Proj2",
+    "slug": "project-2",
+    "url": "https://google2.com",
+    "image": "./images/project2.jpg",
+    "desc": "i made another search engine!"
+  }
+]
