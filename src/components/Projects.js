@@ -4,7 +4,7 @@ import Image from "gatsby-image"
 
 const Projects = ({ imgData, title, desc, slug }) => {
   return (
-    <div>
+    <div className="content">
       <Link to={`/${slug}/`}>
         <Image fluid={imgData} alt={title} />
       </Link>

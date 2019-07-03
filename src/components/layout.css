@@ -1,0 +1,60 @@
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  margin: 0;
+}
+
+body {
+  background-color: rgb(241, 241, 241);
+  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+  background-image: -webkit-linear-gradient(
+      rgba(99, 133, 170, 0.3) 2px,
+      transparent 2px
+    ),
+    -webkit-linear-gradient(0, rgba(99, 133, 170, 0.3) 2px, transparent 2px),
+    -webkit-linear-gradient(rgba(99, 133, 170, 0.3) 1px, transparent 1px),
+    -webkit-linear-gradient(0, rgba(99, 133, 170, 0.3) 1px, transparent 1px);
+  background-image: -moz-linear-gradient(
+      rgba(99, 133, 170, 0.3) 2px,
+      transparent 2px
+    ),
+    -moz-linear-gradient(0, rgba(99, 133, 170, 0.3) 2px, transparent 2px),
+    -moz-linear-gradient(rgba(99, 133, 170, 0.3) 1px, transparent 1px),
+    -moz-linear-gradient(0, rgba(99, 133, 170, 0.3) 1px, transparent 1px);
+  background-image: linear-gradient(
+      rgba(99, 133, 170, 0.3) 2px,
+      transparent 2px
+    ),
+    linear-gradient(90deg, rgba(99, 133, 170, 0.3) 2px, transparent 2px),
+    linear-gradient(rgba(99, 133, 170, 0.3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99, 133, 170, 0.3) 1px, transparent 1px);
+  -pie-background: linear-gradient(rgba(99, 133, 170, 0.3) 2px, transparent 2px) -2px -2px /
+      100px,
+    linear-gradient(90deg, rgba(99, 133, 170, 0.3) 2px, transparent 2px) -2px -2px /
+      100px,
+    linear-gradient(rgba(99, 133, 170, 0.3) 1px, transparent 1px) -1px -1px /
+      20px,
+    linear-gradient(90deg, rgba(99, 133, 170, 0.3) 1px, transparent 1px) -1px -1px /
+      20px,
+    #269;
+
+  /* modified from http://css3pie.com/demos/gradient-patterns/ */
+}
+
+.header {
+  background-color: transparent;
+  padding: 1rem;
+}
+
+.header a {
+  color: blue;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.content {
+  margin: 5rem auto;
+  max-width: 90%;
+  width: 70%;
+}

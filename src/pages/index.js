@@ -14,7 +14,7 @@ export default () => {
             desc
             image {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 700) {
                   ...GatsbyImageSharpFluid
                 }
               }
