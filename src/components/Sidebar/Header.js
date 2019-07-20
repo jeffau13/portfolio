@@ -1,6 +1,6 @@
-import React from "react"
-import { Link } from "gatsby"
-import Scroll from "../../components/Scroll"
+import React from 'react';
+import { Link } from 'gatsby';
+import Scroll from '../../components/Scroll';
 export default function Header({ title, heading }) {
   return (
     <div id="logo">
@@ -12,5 +12,5 @@ export default function Header({ title, heading }) {
         </Link>
       </Scroll>
     </div>
-  )
+  );
 }
