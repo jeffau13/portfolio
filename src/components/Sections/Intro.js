@@ -18,8 +18,8 @@ const Intro = () => {
         </header>
 
         <footer>
-          <Scroll type="id" element={'Section'}>
-            <a href="#portfolio" className="">
+          <Scroll type="id" element={'projects'}>
+            <a href="#projects" className="">
               Show me
             </a>
           </Scroll>

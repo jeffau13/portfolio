@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import ProjectsList from './ProjectsList';
 
 const Section = styled.section`
   background-color: rgb(241, 241, 241);
@@ -44,6 +45,7 @@ const Projects = () => {
         <header>
           <h2>Projects</h2>
         </header>
+        <ProjectsList />
       </div>
     </Section>
   );
