@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.2.1",
+    "@material-ui/icons": "^4.2.1",
     "gatsby": "^2.4.3",
     "gatsby-plugin-manifest": "^2.1.1",
     "gatsby-plugin-offline": "^2.1.0",

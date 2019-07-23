@@ -9,7 +9,7 @@ const localProjects = [
     sys: { id: 0 },
     fields: {
       title: 'Project 1',
-      images: [],
+      images: [{ fields: { url: 'http://via.placeholder.com/900x450' } }],
       description: 'this is my finest project',
       demoUrl: 'https://projects.com',
       repoUrl: 'https://github.com/jffau',
@@ -21,7 +21,7 @@ const localProjects = [
     sys: { id: 1 },
     fields: {
       title: 'Project 2',
-      images: [],
+      images: [{ fields: { url: 'http://via.placeholder.com/900x450' } }],
       description: 'this is my finest project',
       demoUrl: 'https://projects.com',
       repoUrl: 'https://github.com/jffau',
@@ -33,7 +33,7 @@ const localProjects = [
     sys: { id: 2 },
     fields: {
       title: 'Project 3',
-      images: [],
+      images: [{ fields: { url: 'http://via.placeholder.com/900x450' } }],
       description: 'this is my finest project',
       demoUrl: 'https://projects.com',
       repoUrl: 'https://github.com/jffau',
@@ -45,7 +45,7 @@ const localProjects = [
     sys: { id: 3 },
     fields: {
       title: 'Project 4',
-      images: [],
+      images: [{ fields: { url: 'http://via.placeholder.com/900x450' } }],
       description: 'this is my finest project',
       demoUrl: 'https://projects.com',
       repoUrl: 'https://github.com/jffau',
@@ -57,7 +57,7 @@ const localProjects = [
     sys: { id: 4 },
     fields: {
       title: 'Project 5',
-      images: [],
+      images: [{ fields: { url: 'http://via.placeholder.com/900x450' } }],
       description: 'this is my finest project',
       demoUrl: 'https://projects.com',
       repoUrl: 'https://github.com/jffau',
