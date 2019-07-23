@@ -15,7 +15,7 @@ import {
 const sections = [
   { id: 'top', name: 'Intro', icon: 'fa-home' },
   { id: 'about', name: 'About Me', icon: 'fa-user' },
-  { id: 'portfolio', name: 'Portfolio', icon: 'fa-th' },
+  { id: 'projects', name: 'Projects', icon: 'fa-th' },
   { id: 'education', name: 'Education', icon: 'fa-graduation-cap' },
   { id: 'contact', name: 'Contact', icon: 'fa-envelope' }
 ];
