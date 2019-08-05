@@ -222,6 +222,16 @@ $main-blue: #A4D9D6;
 		clear: both;
 	}
 
+	.text-blue{
+		color: $main-blue;
+	}
+	.text-orange{
+		color:$main-orange;
+	}
+	.text-red{
+		color:$main-red;
+	}
+
 /* Container */
 
 	.container {
@@ -557,8 +567,8 @@ $main-blue: #A4D9D6;
 		@include vendor('display', 'flex');
 		@include vendor('flex-direction', 'column');
 		@include vendor('justify-content', 'space-between');
-		background: #222629 url('../images/overlay.png');
-		box-shadow: inset -0.25em 0 0.25em 0 rgba(0, 0, 0, 0.1);
+		background: #4d5968 url('../images/overlay.png');
+		box-shadow: inset -0.25em 0 0.25em 0 rgba(51, 51, 51, 0.1);
 		color: #fff;
 		height: 100%;
 		left: 0;
@@ -586,7 +596,7 @@ $main-blue: #A4D9D6;
 			text-align: center;
 
 			a {
-				color: #41484c;
+				color: $main-blue;
 				@include vendor('transition', 'color 0.35s ease-in-out');
 
 				&:hover {
@@ -604,7 +614,7 @@ $main-blue: #A4D9D6;
 
 		h1 {
 			position: relative;
-			color: #fff;
+			color: $main-red;
 			font-weight: 600;
 			font-size: 1em;
 			line-height: 1em;
@@ -614,7 +624,7 @@ $main-blue: #A4D9D6;
 			position: relative;
 			display: block;
 			font-size: 0.6em;
-			color: rgba(255, 255, 255, 0.5);
+			color: $main-blue;
 			line-height: 1.25em;
 			margin: 0.5em 0 0 0;
 		}
@@ -640,18 +650,18 @@ $main-blue: #A4D9D6;
 					a {
 						background: rgba(0, 0, 0, 0.15);
 						box-shadow: inset 0 0 0.25em 0 rgba(0, 0, 0, 0.125);
-						color: #fff;
+						color: $main-orange;
 
 						span:before {
 							color: $main-red;
 						}
 					}
 				}
-
+				
 				a {
 					display: block;
 					padding: 0.5em 1.5em 0.5em 1.5em;
-					color: rgba(255, 255, 255, 0.5);
+					color: $main-blue;
 					text-decoration: none;
 					outline: 0;
 					border: 0;
@@ -662,10 +672,11 @@ $main-blue: #A4D9D6;
 						display: block;
 						font-size: 0.8em;
 
+						// nav icons:
 						&:before {
 							position: absolute;
 							left: 0;
-							color: #41484c;
+							color: $main-blue;
 							text-align: center;
 							width: 1.25em;
 							line-height: 1.75em;
@@ -723,7 +734,8 @@ $main-blue: #A4D9D6;
 			padding: 4em 0;
 			box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.05), inset 0 0.1em 0.1em 0 rgba(0, 0, 0, 0.025);
 			text-align: center;
-			// background-image: url('../images/overlay.png');
+			background-color: $main-white;
+
 			&.dark {
 				color: #ddd;
 				color: rgba(255, 255, 255, 0.75);
@@ -746,25 +758,9 @@ $main-blue: #A4D9D6;
 					}
 				}
 			}
-
-			
-
-	
 			&.intro {
 				background-image: linear-gradient(145deg, $main-white 43.01%, $main-blue 43.01%, $main-blue 46.24%, $main-orange 46.24%, $main-orange 50%, $main-white 50%, $main-white 93.01%, $main-blue 93.01%, $main-blue 96.24%, $main-orange 96.24%, $main-orange 100%);
 background-size: 324.28px 227.06px;
-			}
-
-			&.two {
-				background-color: #f5fafa;
-			}
-
-			&.three {
-				background-color: #ecf1f1;
-			}
-
-			&.four {
-				background-color: #e8edec;
 			}
 		}
 	}

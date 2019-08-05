@@ -1,6 +1,6 @@
-import React from "react"
-import Scrollspy from "react-scrollspy"
-import Scroll from "../Scroll"
+import React from 'react';
+import Scrollspy from 'react-scrollspy';
+import Scroll from '../Scroll';
 
 export default function Nav({ sections = [] }) {
   return (
@@ -20,10 +20,10 @@ export default function Nav({ sections = [] }) {
                   </a>
                 </Scroll>
               </li>
-            )
+            );
           })}
         </Scrollspy>
       </ul>
     </nav>
-  )
+  );
 }
