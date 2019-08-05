@@ -22,9 +22,14 @@ const ProjectCard = props => {
   return (
     <>
       {props.project ? (
-        <Card>
+        <Card
+          style={{
+            boxShadow:
+              '0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)'
+          }}
+        >
           <CardMedia
-            style={{ height: 0, paddingTop: '56.25%' }}
+            style={{ height: 100, paddingTop: '56.25%', objectFit: 'cover' }}
             image={image}
             title={title}
           />

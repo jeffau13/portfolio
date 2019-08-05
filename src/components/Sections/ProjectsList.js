@@ -64,6 +64,126 @@ const localProjects = [
       tags: 'javascript, react, frontend',
       order: 4
     }
+  },
+  {
+    sys: { id: 0 },
+    fields: {
+      title: 'Project 1',
+      images: [{ fields: { url: 'http://via.placeholder.com/900x450' } }],
+      description: 'this is my finest project',
+      demoUrl: 'https://projects.com',
+      repoUrl: 'https://github.com/jffau',
+      tags: 'javascript, react, frontend',
+      order: 0
+    }
+  },
+  {
+    sys: { id: 0 },
+    fields: {
+      title: 'Project 1',
+      images: [{ fields: { url: 'http://via.placeholder.com/900x450' } }],
+      description: 'this is my finest project',
+      demoUrl: 'https://projects.com',
+      repoUrl: 'https://github.com/jffau',
+      tags: 'javascript, react, frontend',
+      order: 0
+    }
+  },
+  {
+    sys: { id: 0 },
+    fields: {
+      title: 'Project 1',
+      images: [{ fields: { url: 'http://via.placeholder.com/900x450' } }],
+      description: 'this is my finest project',
+      demoUrl: 'https://projects.com',
+      repoUrl: 'https://github.com/jffau',
+      tags: 'javascript, react, frontend',
+      order: 0
+    }
+  },
+  {
+    sys: { id: 0 },
+    fields: {
+      title: 'Project 1',
+      images: [{ fields: { url: 'http://via.placeholder.com/900x450' } }],
+      description: 'this is my finest project',
+      demoUrl: 'https://projects.com',
+      repoUrl: 'https://github.com/jffau',
+      tags: 'javascript, react, frontend',
+      order: 0
+    }
+  },
+  {
+    sys: { id: 0 },
+    fields: {
+      title: 'Project 1',
+      images: [{ fields: { url: 'http://via.placeholder.com/900x900' } }],
+      description: 'this is my finest project',
+      demoUrl: 'https://projects.com',
+      repoUrl: 'https://github.com/jffau',
+      tags: 'javascript, react, frontend',
+      order: 0
+    }
+  },
+  {
+    sys: { id: 0 },
+    fields: {
+      title: 'Project 1',
+      images: [{ fields: { url: 'http://via.placeholder.com/900x450' } }],
+      description: 'this is my finest project',
+      demoUrl: 'https://projects.com',
+      repoUrl: 'https://github.com/jffau',
+      tags: 'javascript, react, frontend',
+      order: 0
+    }
+  },
+  {
+    sys: { id: 0 },
+    fields: {
+      title: 'Project 1',
+      images: [{ fields: { url: 'http://via.placeholder.com/900x450' } }],
+      description: 'this is my finest project',
+      demoUrl: 'https://projects.com',
+      repoUrl: 'https://github.com/jffau',
+      tags: 'javascript, react, frontend',
+      order: 0
+    }
+  },
+  {
+    sys: { id: 0 },
+    fields: {
+      title: 'Project 1',
+      images: [{ fields: { url: 'http://via.placeholder.com/900x450' } }],
+      description: 'this is my finest project',
+      demoUrl: 'https://projects.com',
+      repoUrl: 'https://github.com/jffau',
+      tags: 'javascript, react, frontend',
+      order: 0
+    }
+  },
+  {
+    sys: { id: 0 },
+    fields: {
+      title: 'Project 1',
+      images: [{ fields: { url: 'http://via.placeholder.com/900x450' } }],
+      description: 'this is my finest project',
+      demoUrl: 'https://projects.com',
+      repoUrl: 'https://github.com/jffau',
+      tags: 'javascript, react, frontend',
+      order: 0
+    }
+  },
+  {
+    sys: { id: 0 },
+    fields: {
+      title: 'Project 1',
+      images: [{ fields: { url: 'http://via.placeholder.com/900x450' } }],
+      description: 'this is my finest project',
+      demoUrl: 'https://projects.com',
+      repoUrl: 'https://github.com/jffau',
+      tags: 'javascript, react, frontend',
+      order: 0
+    }
   }
 ];
 
@@ -89,7 +209,7 @@ class ProjectsList extends Component {
           <Grid container spacing={4} alignItems="top" style={{ padding: 2 }}>
             {projects.map(item => {
               return (
-                <Grid key={item.id} item xs={12} sm={6} lg={4} xl={3}>
+                <Grid key={item.sys.id} item xs={12} sm={12} lg={6} xl={4}>
                   <ProjectCard project={item} />
                 </Grid>
               );

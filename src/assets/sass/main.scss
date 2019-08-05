@@ -7,6 +7,14 @@
 @import url("font-awesome.min.css");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,600");
 
+
+//colors:
+$main-red: #E25A53;
+$main-orange: #FD835D;
+$main-white: #FBF4E8;
+$main-blue: #A4D9D6;
+
+
 /*
 	Prologue by HTML5 UP
 	html5up.net | @ajlkn
@@ -112,7 +120,7 @@
 		font-size: 19pt;
 		font-weight: 300;
 		line-height: 1.75em;
-		color: #888;
+
 
 		// Stops initial animations until page loads.
 			&.is-preload {
@@ -129,35 +137,23 @@
 		font-size: 19pt;
 		font-weight: 300;
 		line-height: 1.75em;
-		color: #888;
+
 	}
 
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 300;
-		color: #666;
+
 		line-height: 1.5em;
 	}
 
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 		color: inherit;
 		text-decoration: none;
-
-		strong {
-			color: #333;
-		}
 	}
 
 	h2 {
 		font-size: 2em;
 		letter-spacing: -1px;
-
-		&.alt {
-			color: #888;
-
-			strong {
-				color: #666;
-			}
-		}
 	}
 
 	h3 {
@@ -178,7 +174,6 @@
 
 	strong, b {
 		font-weight: 300;
-		color: #666;
 	}
 
 	em, i {
@@ -188,13 +183,11 @@
 	a {
 		text-decoration: none;
 		color: inherit;
-		border-bottom: dotted 1px rgba(128, 128, 128, 0.5);
 		@include vendor('transition', ('color 0.35s ease-in-out', 'border-bottom-color 0.35s ease-in-out'));
 		outline: 0;
 
 		&:hover {
 			color: #E27689;
-			border-bottom-color: rgba(255, 255, 255, 0);
 		}
 	}
 
@@ -650,7 +643,7 @@
 						color: #fff;
 
 						span:before {
-							color: #e27689;
+							color: $main-red;
 						}
 					}
 				}
@@ -756,15 +749,10 @@
 
 			
 
-			&.cover {
-				padding: 10em 0;
-				background-size: cover;
-				background-position: center center;
-			}
-
-			&.one {
-				background-color: #81918E;
-				background-image: url('../images/banner.jpg');
+	
+			&.intro {
+				background-image: linear-gradient(145deg, $main-white 43.01%, $main-blue 43.01%, $main-blue 46.24%, $main-orange 46.24%, $main-orange 50%, $main-white 50%, $main-white 93.01%, $main-blue 93.01%, $main-blue 96.24%, $main-orange 96.24%, $main-orange 100%);
+background-size: 324.28px 227.06px;
 			}
 
 			&.two {

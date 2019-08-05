@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import Card from '@material-ui/core/Card';
+
 import ProjectsList from './ProjectsList';
 
 const Section = styled.section`
@@ -45,6 +47,7 @@ const Projects = () => {
         <header>
           <h2>Projects</h2>
         </header>
+
         <ProjectsList />
       </div>
     </Section>

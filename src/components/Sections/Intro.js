@@ -3,7 +3,7 @@ import Scroll from '../Scroll';
 
 const Intro = () => {
   return (
-    <section id="top" className="one dark cover">
+    <section id="top" className="intro">
       <div className="container">
         <header>
           <h2 className="alt">
