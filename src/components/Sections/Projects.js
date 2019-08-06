@@ -47,7 +47,7 @@ const Projects = () => {
     <Section id="projects" className="two">
       <div className="container">
         <header>
-          <h2>Projects</h2>
+          <h2 className="text-red">Projects</h2>
         </header>
 
         <ProjectsList />

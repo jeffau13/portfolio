@@ -206,10 +206,10 @@ class ProjectsList extends Component {
     return (
       <Container>
         <div>
-          <Grid container spacing={4} alignItems="top" style={{ padding: 2 }}>
+          <Grid container spacing={10} alignItems="top" style={{ padding: 2 }}>
             {projects.map(item => {
               return (
-                <Grid key={item.sys.id} item xs={12} sm={12} lg={6} xl={4}>
+                <Grid key={item.sys.id} item xs={12} sm={12} lg={6} xl={6}>
                   <ProjectCard project={item} />
                 </Grid>
               );
