@@ -23,6 +23,7 @@ module.exports = {
       resolve: `gatsby-plugin-styled-components`
     },
     'gatsby-plugin-sass',
+    'gatsby-plugin-material-ui',
     'gatsby-plugin-offline'
   ]
 };
