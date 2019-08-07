@@ -17,8 +17,8 @@ const ProjectCard = props => {
     demoUrl,
     repoUrl,
     tags
-  } = props.project.fields;
-  const { url: image } = images[0].fields;
+  } = props.project.node;
+  const { src: image } = props.project.node.screenshot[0].fluid
   return (
     <>
       {props.project ? (

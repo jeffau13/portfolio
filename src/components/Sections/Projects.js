@@ -1,8 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
-import Card from '@material-ui/core/Card';
 
 import ProjectsList from './ProjectsList';
+
+const Projects = () => {
+  return (
+    <Section id="projects" className="two">
+      <div className="container">
+        <header>
+          <h2 className="text-red">Projects</h2>
+        </header>
+        <ProjectsList /> 
+      </div>
+    </Section>
+  );
+};
 
 const Section = styled.section`
   background-color: #fbf4e8;
@@ -42,18 +54,5 @@ const Section = styled.section`
     #269;
 `;
 
-const Projects = () => {
-  return (
-    <Section id="projects" className="two">
-      <div className="container">
-        <header>
-          <h2 className="text-red">Projects</h2>
-        </header>
-
-        <ProjectsList />
-      </div>
-    </Section>
-  );
-};
 
 export default Projects;
