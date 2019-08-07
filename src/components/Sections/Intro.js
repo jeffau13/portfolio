@@ -21,7 +21,7 @@ const Intro = () => {
               '0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)',
             maxWidth: '900px',
             margin: 'auto',
-            padding: '70px',
+            padding: '70px 15px',
             opacity: '0.94'
           }}
         >
@@ -36,7 +36,7 @@ const Intro = () => {
                   <br />
                 </h3>
                 <h3>
-                  My name is <span className="text-red">Jeffrey Au</span>
+                  My name is <span className="text-red">Jeff Au</span>
                 </h3>
                 <p>
                   I am a <span className="text-red">frontend javascript </span>{' '}
