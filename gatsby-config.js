@@ -3,7 +3,7 @@ const config = require('./config');
 module.exports = {
   pathPrefix: config.pathPrefix,
   siteMetadata: {
-    title: config.siteTitle,
+    title: config.siteTitle
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -16,10 +16,13 @@ module.exports = {
         background_color: config.manifestBackgroundColor,
         theme_color: config.manifestThemeColor,
         display: config.manifestDisplay,
-        icon: config.manifestIcon, // This path is relative to the root of the site.
-      },
+        icon: config.manifestIcon // This path is relative to the root of the site.
+      }
+    },
+    {
+      resolve: `gatsby-plugin-styled-components`
     },
     'gatsby-plugin-sass',
-    'gatsby-plugin-offline',
-  ],
+    'gatsby-plugin-offline'
+  ]
 };
