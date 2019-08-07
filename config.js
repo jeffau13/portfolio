@@ -1,12 +1,12 @@
 module.exports = {
-  siteTitle: "Jeff Au's Portfolio", // <title>
-  manifestName: 'JeffAu',
-  manifestShortName: 'Landing', // max 12 characters
+  siteTitle: 'Jeff Au | Frontend Developer', // <title>
+  manifestName: 'Jeff Au',
+  manifestShortName: 'Portfolio', // max 12 characters
   manifestStartUrl: '/',
-  manifestBackgroundColor: '#663399',
-  manifestThemeColor: '#FFCB00',
+  manifestBackgroundColor: '#FBF4E8',
+  manifestThemeColor: '#A4D9D6',
   manifestDisplay: 'standalone',
-  // manifestIcon: '',
+  manifestIcon: 'src/assets/icons/j.png',
   pathPrefix: `/portfolio`, // This path is subpath of your hosting https://domain/portfolio
   authorName: 'Jeff Au',
   heading: 'Software Engineer',
