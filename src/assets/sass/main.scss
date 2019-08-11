@@ -254,6 +254,7 @@ $main-blue: #A4D9D6;
 		max-width: 100%;
 		width: 1400px;
 
+
 		@include breakpoint('wide') {
 			width: 1200px;
 		}
@@ -713,7 +714,6 @@ $main-blue: #A4D9D6;
 			min-height:100vh;
 			display: flex;
 			flex-direction: column;
-			justify-content: center;
 			margin: 0;
 			overflow: visible;
 			padding: 4em 0;
@@ -759,6 +759,11 @@ $main-blue: #A4D9D6;
 			.btn-blue{
 				background-color: #89bdbb;
 			}
+		}
+
+		#top{
+			justify-content: center;
+
 		}
 	}
 
