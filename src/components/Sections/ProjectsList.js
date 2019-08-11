@@ -12,10 +12,12 @@ const getProjects = graphql`
         node {
           id
           title
-          description
+          tech
+          description {
+            json
+          }
           demoUrl
           repoUrl
-          tags
           order
           screenshot {
             fluid {
