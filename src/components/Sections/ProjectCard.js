@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from '@material-ui/core/Card';
-import { makeStyles } from '@material-ui/core/styles';
+import RichTextToReact from 'rich-text-to-react';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
@@ -16,9 +16,10 @@ const ProjectCard = props => {
     description,
     demoUrl,
     repoUrl,
-    tags
+    tech
   } = props.project.node;
-  const { src: image } = props.project.node.screenshot[0].fluid
+  const { json } = props.project.node.description;
+  const { src: image } = props.project.node.screenshot[0].fluid;
   return (
     <>
       {props.project ? (
@@ -38,7 +39,7 @@ const ProjectCard = props => {
               {title}
             </Typography>
             <Typography gutterBottom variant="headline" component="h5">
-              technology: {tags}
+              tech: {tech.map(tech => tech + ' ')}
             </Typography>
           </CardContent>
           <ExpansionPanel>
@@ -46,12 +47,14 @@ const ProjectCard = props => {
               <Typography variant="subtitle1">Description</Typography>
             </ExpansionPanelSummary>
             <ExpansionPanelDetails>
-              <Typography variant="body1">{description}</Typography>
+              <Typography variant="body1">
+                <RichTextToReact document={json} />
+              </Typography>
             </ExpansionPanelDetails>
 
             <ExpansionPanelDetails>
               <Typography variant="body2" style={{ color: '#475757' }}>
-                {tags && `Tags: ${tags}`}
+                {/* {tags && `Tags: ${tags}`} */}
               </Typography>
             </ExpansionPanelDetails>
           </ExpansionPanel>

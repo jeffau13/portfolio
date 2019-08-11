@@ -10,7 +10,7 @@ const Projects = () => {
         <header>
           <h2 className="text-red">Projects</h2>
         </header>
-        <ProjectsList /> 
+        <ProjectsList />
       </div>
     </Section>
   );
@@ -53,6 +53,5 @@ const Section = styled.section`
       20px,
     #269;
 `;
-
 
 export default Projects;

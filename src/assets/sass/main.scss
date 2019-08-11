@@ -11,8 +11,8 @@
 //colors:
 $main-red: #E25A53;
 $main-orange: #FD835D;
-$main-white: #FBF4E8;
 $main-blue: #A4D9D6;
+$main-white: #FBF4E8;
 
 
 /*
@@ -182,9 +182,14 @@ $main-blue: #A4D9D6;
 
 	a {
 		text-decoration: none;
-		color: inherit;
+		color: $main-red ;
 		@include vendor('transition', ('color 0.35s ease-in-out', 'border-bottom-color 0.35s ease-in-out'));
 		outline: 0;
+	}
+
+	a:hover{
+		color: $main-blue;
+		text-decoration: underline;
 	}
 	
 
