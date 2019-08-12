@@ -765,11 +765,33 @@ $main-white: #FBF4E8;
 				background-color: #89bdbb;
 			}
 		}
-
 		#top{
 			justify-content: center;
-
 		}
+		// tech tags
+		.tech{
+			display: flex;
+			justify-content: space-evenly;
+			span{
+								border-radius: 25px;
+				padding: 0 1rem;
+			}
+		}
+		.tech-tag{
+			background-color:$main-red;
+			color: $main-blue;
+			font-weight:bold;
+		}
+		.node-tag{
+			background-color: rgba(141, 197, 122,0.8);
+			color:black;
+		}
+		.scss-tag{
+			background-color: rgba(216, 95, 137, 0.8)
+		}
+
+
+		
 	}
 
 /* Wide */

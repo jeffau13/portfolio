@@ -38,9 +38,14 @@ const ProjectCard = props => {
             <Typography gutterBottom variant="headline" component="h2">
               {title}
             </Typography>
-            <Typography gutterBottom variant="headline" component="h5">
-              tech: {tech.map(tech => tech + ' ')}
-            </Typography>
+            <div className="tech">
+              {' '}
+              {tech.map(tech => {
+                return (
+                  <span className={`${tech}-tag tech-tag `}> {tech} </span>
+                );
+              })}
+            </div>
           </CardContent>
           <ExpansionPanel>
             <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
