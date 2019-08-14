@@ -10,6 +10,9 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Typography from '@material-ui/core/Typography';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import { Divider } from '@material-ui/core';
 
 const ProjectCard = props => {
@@ -38,7 +41,10 @@ const ProjectCard = props => {
               {' '}
               {tech.map(tech => {
                 return (
-                  <span className={`${tech}-tag tech-tag `}> {tech} </span>
+                  <span key={tech} className={`${tech}-tag tech-tag `}>
+                    {' '}
+                    {tech}{' '}
+                  </span>
                 );
               })}
             </Tech>
@@ -48,14 +54,19 @@ const ProjectCard = props => {
               <Typography variant="subtitle1">Details</Typography>
             </ExpansionPanelSummary>
             <ExpansionPanelDetails>
-              <Typography variant="body1">
+              <Description>
                 <RichTextToReact document={json} />
-              </Typography>
+              </Description>
             </ExpansionPanelDetails>
             <Divider />
             <Links>
               {repoUrl !== 'none' ? (
-                <Button size="large" variant="outlined" href={repoUrl}>
+                <Button size="large" variant="contained" href={repoUrl}>
+                  <FontAwesomeIcon
+                    icon={faGithub}
+                    size="lg"
+                    style={{ marginRight: '5px' }}
+                  />{' '}
                   View Source
                 </Button>
               ) : null}
@@ -79,6 +90,7 @@ const ProjectCard = props => {
   );
 };
 
+//styled-components
 const Tech = styled.div`
   display: flex;
   justify-content: space-evenly;
@@ -86,6 +98,27 @@ const Tech = styled.div`
     border-radius: 1em;
     padding: 0 0.8rem;
   }
+  /* default tech-tag styles: */
+  .tech-tag {
+    background-color: #a4d9d6;
+    color: #fd835d;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  /* colorized tags: */
+  .node-tag {
+    background-color: rgba(141, 197, 122, 0.8);
+    color: black;
+  }
+  .scss-tag {
+    background-color: rgba(216, 95, 137, 0.8);
+    color: black;
+  }
+`;
+
+const Description = styled.div`
+  font-size: 1.2rem;
 `;
 
 const Links = styled.div`

@@ -179,8 +179,11 @@ $main-white: #FBF4E8;
 	em, i {
 		font-style: italic;
 	}
-
-	a {
+	a{
+		text-decoration: none;
+	}
+	p{
+		a {
 		text-decoration: none;
 		color: $main-red ;
 		@include vendor('transition', ('color 0.35s ease-in-out', 'border-bottom-color 0.35s ease-in-out'));
@@ -191,7 +194,7 @@ $main-white: #FBF4E8;
 		color: $main-blue;
 		text-decoration: underline;
 	}
-	
+	}
 
 	sub {
 		position: relative;
@@ -514,34 +517,6 @@ $main-white: #FBF4E8;
 		}
 	}
 
-/* Button */
-
-	input[type="button"],
-	input[type="submit"],
-	input[type="reset"],
-	button,
-	.button {
-		position: relative;
-		display: inline-block;
-		border-radius: 0.35em;
-		color: #fff !important;
-		text-decoration: none;
-		padding: 0.75em 2.5em 0.75em 2.5em;
-		background-color: #8ebebc;
-		border: 0;
-		cursor: pointer;
-		@include vendor('background-image', ('linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15))', 'url("../images/overlay.png")'));
-		@include vendor('transition', 'background-color 0.35s ease-in-out');
-
-		&:hover {
-			background-color: #9ececc;
-		}
-
-		&:active {
-			background-color: #7eaeac;
-		}
-	}
-
 /* Item */
 
 	.item {
@@ -768,30 +743,6 @@ $main-white: #FBF4E8;
 		#top{
 			justify-content: center;
 		}
-		// tech tags
-		.tech{
-			display: flex;
-			justify-content: space-evenly;
-			span{
-								border-radius: 25px;
-				padding: 0 1rem;
-			}
-		}
-		.tech-tag{
-			background-color:$main-red;
-			color: $main-blue;
-			font-weight:bold;
-		}
-		.node-tag{
-			background-color: rgba(141, 197, 122,0.8);
-			color:black;
-		}
-		.scss-tag{
-			background-color: rgba(216, 95, 137, 0.8)
-		}
-
-
-		
 	}
 
 /* Wide */

@@ -41,7 +41,7 @@ const ProjectsList = () => {
               <Grid
                 container
                 spacing={10}
-                alignItems="top"
+                alignItems="flex-start"
                 style={{ padding: 2 }}
               >
                 {data.projects.edges.map(item => {
