@@ -1,13 +1,23 @@
 import React from 'react';
 import Card from '@material-ui/core/Card';
 import RichTextToReact from 'rich-text-to-react';
+import styled from 'styled-components';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+import ExpansionPanelActions from '@material-ui/core/ExpansionPanelActions';
+import Button from '@material-ui/core/Button';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Typography from '@material-ui/core/Typography';
+import { Divider } from '@material-ui/core';
+
+const Links = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1rem;
+`;
 
 const ProjectCard = props => {
   const {
@@ -35,7 +45,7 @@ const ProjectCard = props => {
             title={title}
           />
           <CardContent>
-            <Typography gutterBottom variant="headline" component="h2">
+            <Typography gutterBottom component="h2">
               {title}
             </Typography>
             <div className="tech">
@@ -49,19 +59,31 @@ const ProjectCard = props => {
           </CardContent>
           <ExpansionPanel>
             <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-              <Typography variant="subtitle1">Description</Typography>
+              <Typography variant="subtitle1">Details</Typography>
             </ExpansionPanelSummary>
             <ExpansionPanelDetails>
               <Typography variant="body1">
                 <RichTextToReact document={json} />
               </Typography>
             </ExpansionPanelDetails>
-
-            <ExpansionPanelDetails>
-              <Typography variant="body2" style={{ color: '#475757' }}>
-                {/* {tags && `Tags: ${tags}`} */}
-              </Typography>
-            </ExpansionPanelDetails>
+            <Divider />
+            <Links>
+              {repoUrl ? (
+                <Button size="large" variant="outlined" href={repoUrl}>
+                  View Source
+                </Button>
+              ) : null}
+              {demoUrl ? (
+                <Button
+                  size="large"
+                  variant="outlined"
+                  color="primary"
+                  href={demoUrl}
+                >
+                  DEMO
+                </Button>
+              ) : null}
+            </Links>
           </ExpansionPanel>
         </Card>
       ) : (
