@@ -34,9 +34,7 @@ const ProjectCard = props => {
             title={title}
           />
           <CardContent>
-            <Typography gutterBottom component="h2">
-              {title}
-            </Typography>
+            <Title>{title}</Title>
             <Tech>
               {' '}
               {tech.map(tech => {
@@ -61,19 +59,19 @@ const ProjectCard = props => {
             <Divider />
             <Links>
               {repoUrl !== 'none' ? (
-                <Button size="large" variant="contained" href={repoUrl}>
+                <Button size="medium" variant="text" href={repoUrl}>
+                  View Source
                   <FontAwesomeIcon
                     icon={faGithub}
                     size="lg"
-                    style={{ marginRight: '5px' }}
-                  />{' '}
-                  View Source
+                    style={{ marginLeft: '5px' }}
+                  />
                 </Button>
               ) : null}
               {demoUrl !== 'none' ? (
                 <Button
-                  size="large"
-                  variant="outlined"
+                  size="medium"
+                  variant="text"
                   color="primary"
                   href={demoUrl}
                 >
@@ -91,6 +89,13 @@ const ProjectCard = props => {
 };
 
 //styled-components
+
+const Title = styled.h1`
+  font-size: 2.5rem;
+  color: #e25a53;
+  margin-bottom: 1rem;
+`;
+
 const Tech = styled.div`
   display: flex;
   justify-content: space-evenly;
