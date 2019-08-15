@@ -7,7 +7,9 @@ import ProjectCard from './ProjectCard';
 
 const getProjects = graphql`
   {
-    projects: allContentfulPortfolioProjects {
+    projects: allContentfulPortfolioProjects(
+      sort: { fields: [order], order: ASC }
+    ) {
       edges {
         node {
           id
