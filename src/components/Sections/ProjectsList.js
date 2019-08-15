@@ -18,6 +18,7 @@ const getProjects = graphql`
           }
           demoUrl
           repoUrl
+          pptUrl
           order
           screenshot {
             fluid {

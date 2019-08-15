@@ -16,7 +16,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Divider } from '@material-ui/core';
 
 const ProjectCard = props => {
-  const { title, demoUrl, repoUrl, tech, screenshot } = props.project.node;
+  const {
+    title,
+    demoUrl,
+    repoUrl,
+    pptUrl,
+    tech,
+    screenshot
+  } = props.project.node;
   const { json } = props.project.node.description;
   // const { src: image } = screenshot[0].fluid;
 
@@ -80,6 +87,16 @@ const ProjectCard = props => {
                   />
                 </Button>
               ) : null}
+              {pptUrl !== 'none' ? (
+                <Button
+                  size="medium"
+                  variant="text"
+                  color="primary"
+                  href={demoUrl}
+                >
+                  Presentation
+                </Button>
+              ) : null}
               {demoUrl !== 'none' ? (
                 <Button
                   size="medium"
@@ -122,9 +139,16 @@ const Title = styled.h1`
 const Tech = styled.div`
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   span {
     border-radius: 1em;
     padding: 0 0.8rem;
+  }
+  @media all and (max-width: 500px) {
+    span {
+      margin-bottom: 0.5rem;
+      width: 40%;
+    }
   }
   /* default tech-tag styles: */
   .tech-tag {
@@ -143,6 +167,18 @@ const Tech = styled.div`
     background-color: rgba(216, 95, 137, 0.8);
     color: black;
   }
+  .Adobe.XD-tag {
+    background-color: #2e001f;
+    color: #ffd9f2;
+  }
+  .react-tag {
+    background-color: #222222;
+    color: #58c0df;
+  }
+  .gatsby-tag {
+    background-color: #633295;
+    color: #ffffff;
+  }
 `;
 
 const Description = styled.div`
@@ -151,6 +187,7 @@ const Description = styled.div`
 
 const Links = styled.div`
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   margin: 1rem;
 `;
