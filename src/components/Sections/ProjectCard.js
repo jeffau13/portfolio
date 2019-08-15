@@ -7,18 +7,25 @@ import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import Button from '@material-ui/core/Button';
 import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
+import Carousel from 'react-images';
+
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Typography from '@material-ui/core/Typography';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 import { Divider } from '@material-ui/core';
 
 const ProjectCard = props => {
-  const { title, images, demoUrl, repoUrl, tech } = props.project.node;
+  const { title, demoUrl, repoUrl, tech, screenshot } = props.project.node;
   const { json } = props.project.node.description;
-  const { src: image } = props.project.node.screenshot[0].fluid;
+  // const { src: image } = screenshot[0].fluid;
+
+  // formatting an array for carousel:
+  const views = screenshot.map(image => {
+    const url = image.fluid.src;
+    return { src: url };
+  });
+
   return (
     <>
       {props.project ? (
@@ -28,13 +35,18 @@ const ProjectCard = props => {
               '0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)'
           }}
         >
-          <CardMedia
-            style={{ height: 100, paddingTop: '56.25%', objectFit: 'cover' }}
-            image={image}
-            title={title}
-          />
+          {views.length === 1 ? (
+            <a href={demoUrl}>
+              <Carousel views={views} styles={CarouselStyles} />
+            </a>
+          ) : (
+            <Carousel views={views} styles={CarouselStyles} />
+          )}
           <CardContent>
-            <Title>{title}</Title>
+            <Title>
+              <a href={demoUrl}>{title} </a>
+            </Title>
+
             <Tech>
               {' '}
               {tech.map(tech => {
@@ -88,12 +100,23 @@ const ProjectCard = props => {
   );
 };
 
+const CarouselStyles = {
+  footer: (base, state) => {
+    const display = 'none';
+    return { ...base, display };
+  }
+};
+
 //styled-components
 
 const Title = styled.h1`
   font-size: 2.5rem;
   color: #e25a53;
   margin-bottom: 1rem;
+
+  a:hover {
+    text-decoration: underline;
+  }
 `;
 
 const Tech = styled.div`
