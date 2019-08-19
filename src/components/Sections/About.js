@@ -1,6 +1,8 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import RichTextToReact from 'rich-text-to-react';
+import { MARKS } from '@contentful/rich-text-types';
+
 import styled from 'styled-components';
 import { Tags } from '../Tags';
 
@@ -35,7 +37,11 @@ const About = () => {
 
             return (
               <>
-                <RichTextToReact document={json} key={id} />
+                <RichTextToReact
+                  document={json}
+                  key={id}
+                  options={RichTextOptions}
+                />
                 <div>
                   <h2>Skills</h2>
                   <p>
@@ -71,5 +77,16 @@ const Skills = styled(Tags)`
     padding: 0 0.8rem;
   }
 `;
+
+const RichTextOptions = {
+  renderMark: {
+    // Render all bold text ... bold
+    [MARKS.BOLD]: (text, key) => (
+      <strong key={key} style={{ fontWeight: 'bold' }}>
+        {text}
+      </strong>
+    )
+  }
+};
 
 export default About;

@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from '@material-ui/core/Card';
 import RichTextToReact from 'rich-text-to-react';
+import { MARKS } from '@contentful/rich-text-types';
 import styled from 'styled-components';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
@@ -80,7 +81,7 @@ const ProjectCard = props => {
             </ExpansionPanelSummary>
             <ExpansionPanelDetails>
               <Description>
-                <RichTextToReact document={json} />
+                <RichTextToReact document={json} options={RichTextOptions} />
               </Description>
             </ExpansionPanelDetails>
             <Divider />
@@ -170,5 +171,15 @@ const Links = styled.div`
   justify-content: space-evenly;
   margin: 1rem;
 `;
+
+const RichTextOptions = {
+  renderMark: {
+    [MARKS.BOLD]: (text, key) => (
+      <strong key={key} style={{ fontWeight: 'bold' }}>
+        {text}
+      </strong>
+    )
+  }
+};
 
 export default ProjectCard;
