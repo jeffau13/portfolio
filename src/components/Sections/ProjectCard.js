@@ -8,7 +8,7 @@ import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import Button from '@material-ui/core/Button';
 import CardContent from '@material-ui/core/CardContent';
 import Carousel from 'react-images';
-
+import { Tech } from '../Tech';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Typography from '@material-ui/core/Typography';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -44,10 +44,18 @@ const ProjectCard = props => {
         >
           {views.length === 1 ? (
             <a href={demoUrl}>
-              <Carousel views={views} styles={CarouselStyles} />
+              <Carousel
+                views={views}
+                interactionIsIdle={false}
+                styles={CarouselStyles}
+              />
             </a>
           ) : (
-            <Carousel views={views} styles={CarouselStyles} />
+            <Carousel
+              views={views}
+              interactionIsIdle={false}
+              styles={CarouselStyles}
+            />
           )}
           <CardContent>
             <Title>
@@ -133,51 +141,6 @@ const Title = styled.h1`
 
   a:hover {
     text-decoration: underline;
-  }
-`;
-
-const Tech = styled.div`
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  span {
-    border-radius: 1em;
-    padding: 0 0.8rem;
-  }
-  @media all and (max-width: 500px) {
-    span {
-      margin-bottom: 0.5rem;
-      width: 40%;
-    }
-  }
-  /* default tech-tag styles: */
-  .tech-tag {
-    background-color: #a4d9d6;
-    color: #fd835d;
-    font-size: 1.2rem;
-    font-weight: 500;
-  }
-
-  /* colorized tags: */
-  .node-tag {
-    background-color: rgba(141, 197, 122, 0.8);
-    color: black;
-  }
-  .scss-tag {
-    background-color: rgba(216, 95, 137, 0.8);
-    color: black;
-  }
-  .Adobe.XD-tag {
-    background-color: #2e001f;
-    color: #ffd9f2;
-  }
-  .react-tag {
-    background-color: #222222;
-    color: #58c0df;
-  }
-  .gatsby-tag {
-    background-color: #633295;
-    color: #ffffff;
   }
 `;
 
