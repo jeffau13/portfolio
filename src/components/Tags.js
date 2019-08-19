@@ -34,4 +34,12 @@ export const Tags = styled.div`
     background-color: #e535ab;
     color: #fff;
   }
+  .mongodb-tag {
+    background-color: #0aaa50;
+    color: #fff;
+  }
+  .javascript {
+    background-color: #ffcb00;
+    color: #000;
+  }
 `;
