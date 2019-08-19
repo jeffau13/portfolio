@@ -8,7 +8,7 @@ import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import Button from '@material-ui/core/Button';
 import CardContent from '@material-ui/core/CardContent';
 import Carousel from 'react-images';
-import { Tech } from '../Tech';
+import { Tags } from '../Tags';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Typography from '@material-ui/core/Typography';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -124,6 +124,22 @@ const ProjectCard = props => {
     </>
   );
 };
+
+const Tech = styled(Tags)`
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  span {
+    border-radius: 1em;
+    padding: 0 0.8rem;
+  }
+  @media all and (max-width: 500px) {
+    span {
+      margin-bottom: 0.5rem;
+      width: 40%;
+    }
+  }
+`;
 
 const CarouselStyles = {
   footer: (base, state) => {
