@@ -36,30 +36,34 @@ const About = () => {
             const { json } = data.aboutInfo.edges[0].node.aboutText;
 
             return (
-              <>
-                <RichTextToReact
-                  document={json}
-                  key={id}
-                  options={RichTextOptions}
-                />
+              <AboutContainer>
                 <div>
-                  <h2>Skills</h2>
-                  <p>
-                    {' '}
-                    Here's a list of languages and technologies that I have
-                    experience working with:
-                  </p>
+                  <RichTextToReact
+                    document={json}
+                    key={id}
+                    options={RichTextOptions}
+                  />
                 </div>
-                <Skills>
-                  {skills.map((skill, index) => {
-                    return (
-                      <span key={index} className={`${skill}-tag tech-tag`}>
-                        {skill}
-                      </span>
-                    );
-                  })}
-                </Skills>
-              </>
+                <div>
+                  <div>
+                    <h2>Skills</h2>
+                    <p>
+                      {' '}
+                      Here's a list of languages and technologies that I have
+                      experience working with:
+                    </p>
+                  </div>
+                  <Skills>
+                    {skills.map((skill, index) => {
+                      return (
+                        <span key={index} className={`${skill}-tag tech-tag`}>
+                          {skill}
+                        </span>
+                      );
+                    })}
+                  </Skills>
+                </div>
+              </AboutContainer>
             );
           }}
         />
@@ -77,10 +81,15 @@ const Skills = styled(Tags)`
     padding: 0 0.8rem;
   }
 `;
+const AboutContainer = styled.div`
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 4rem;
+`;
 
 const RichTextOptions = {
   renderMark: {
-    // Render all bold text ... bold
+    // Render all bold text ...
     [MARKS.BOLD]: (text, key) => (
       <strong key={key} style={{ fontWeight: 'bold' }}>
         {text}
