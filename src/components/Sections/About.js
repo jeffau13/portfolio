@@ -37,13 +37,13 @@ const About = () => {
 
             return (
               <AboutContainer>
-                <div>
+                <AboutText>
                   <RichTextToReact
                     document={json}
                     key={id}
                     options={RichTextOptions}
                   />
-                </div>
+                </AboutText>
                 <div>
                   <div>
                     <h2>Skills</h2>
@@ -72,19 +72,35 @@ const About = () => {
   );
 };
 
-const Skills = styled(Tags)`
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  span {
-    border-radius: 1em;
-    padding: 0 0.8rem;
-  }
-`;
 const AboutContainer = styled.div`
   display: grid;
   grid-template-columns: 2fr 1fr;
-  grid-gap: 4rem;
+  grid-gap: 6rem;
+  margin-top: 20%;
+  @media all and (max-width: 960px) {
+    grid-template-columns: 1fr;
+    margin-top: 0;
+  }
+`;
+
+const AboutText = styled.div`
+  text-align: left;
+`;
+
+const Skills = styled(Tags)`
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  span {
+    margin-bottom: 2.5rem;
+    border-radius: 1em;
+    padding: 0 0.8rem;
+  }
+
+  @media all and (max-width: 960px) {
+    width: 90%;
+    margin: auto;
+  }
 `;
 
 const RichTextOptions = {
