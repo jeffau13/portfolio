@@ -89,7 +89,7 @@ const AboutText = styled.div`
 
 const Skills = styled(Tags)`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
   span {
     margin-bottom: 2.5rem;

@@ -137,7 +137,7 @@ const Tech = styled(Tags)`
   @media all and (max-width: 500px) {
     span {
       margin-bottom: 0.5rem;
-      width: 40%;
+      width: 35%;
     }
   }
 `;
@@ -154,10 +154,16 @@ const CarouselStyles = {
 const Title = styled.h1`
   font-size: 2.5rem;
   color: #e25a53;
+  font-weight: 500;
   margin-bottom: 1rem;
 
   a:hover {
     text-decoration: underline;
+    color: #fd835d;
+  }
+
+  @media all and (max-width: 500px) {
+    font-size: 1.8rem;
   }
 `;
 
