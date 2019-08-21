@@ -82,11 +82,11 @@ const Intro = () => {
               <a href="https://www.linkedin.com/in/jffau">
                 <FontAwesomeIcon icon={faLinkedin} size="lg" />
               </a>
-              <Scroll type="id" element={'contact'}>
-                <a href="#contact">
-                  <FontAwesomeIcon icon={faEnvelopeOpen} size="lg" />
-                </a>
-              </Scroll>
+              {/* <Scroll type="id" element={'contact'}> */}
+              <a href="mailto:jeffau.dev@gmail.com">
+                <FontAwesomeIcon icon={faEnvelopeOpen} size="lg" />
+              </a>
+              {/* </Scroll> */}
             </SocialIcons>
           </div>
         </Card>

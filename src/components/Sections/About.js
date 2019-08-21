@@ -2,6 +2,8 @@ import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import RichTextToReact from 'rich-text-to-react';
 import { MARKS } from '@contentful/rich-text-types';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
 
 import styled from 'styled-components';
 import { Tags } from '../Tags';
@@ -45,23 +47,31 @@ const About = () => {
                   />
                 </AboutText>
                 <div>
-                  <div>
-                    <h2>Skills</h2>
-                    <p>
-                      {' '}
-                      Here's a list of languages and technologies that I have
-                      experience working with:
-                    </p>
-                  </div>
-                  <Skills>
-                    {skills.map((skill, index) => {
-                      return (
-                        <span key={index} className={`${skill}-tag tech-tag`}>
-                          {skill}
-                        </span>
-                      );
-                    })}
-                  </Skills>
+                  <Card
+                    style={{
+                      boxShadow:
+                        '0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)',
+                      padding: '30px'
+                    }}
+                  >
+                    <div>
+                      <h2>Skills</h2>
+                      <p>
+                        {' '}
+                        Here's a list of languages and technologies that I have
+                        experience working with:
+                      </p>
+                    </div>
+                    <Skills>
+                      {skills.map((skill, index) => {
+                        return (
+                          <span key={index} className={`${skill}-tag tech-tag`}>
+                            {skill}
+                          </span>
+                        );
+                      })}
+                    </Skills>
+                  </Card>
                 </div>
               </AboutContainer>
             );
@@ -74,8 +84,8 @@ const About = () => {
 
 const AboutContainer = styled.div`
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-gap: 6rem;
+  grid-template-columns: 3fr 2fr;
+  grid-gap: 2rem;
   margin-top: 20%;
   @media all and (max-width: 960px) {
     grid-template-columns: 1fr;

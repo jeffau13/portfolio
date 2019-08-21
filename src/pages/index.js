@@ -13,9 +13,9 @@ import {
 const sections = [
   { id: 'top', name: 'Intro', icon: 'fa-home' },
   { id: 'projects', name: 'Projects', icon: 'fa-th' },
-  { id: 'about', name: 'About Me', icon: 'fa-user' },
+  { id: 'about', name: 'About Me', icon: 'fa-user' }
   // { id: 'education', name: 'Education', icon: 'fa-graduation-cap' },
-  { id: 'contact', name: 'Contact', icon: 'fa-envelope' }
+  // { id: 'contact', name: 'Contact', icon: 'fa-envelope' }
 ];
 
 const IndexPage = () => (
@@ -25,7 +25,7 @@ const IndexPage = () => (
     <Projects />
     <About />
     {/* <Education /> */}
-    <Contact />
+    {/* <Contact /> */}
   </Layout>
 );
 
