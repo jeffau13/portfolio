@@ -38,6 +38,19 @@ export const Tags = styled.div`
     background-color: #0aaa50;
     color: #fff;
   }
+  .redux-tag {
+    background-color: #764abc;
+    color: #fff;
+  }
+  .python-tag {
+    background-color: #376d9c;
+    color: #ffd64d;
+  }
+  .php-tag {
+    background-color: #4d588f;
+    color: #fff;
+  }
+
   .javascript {
     background-color: #ffcb00;
     color: #000;
