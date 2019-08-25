@@ -2,6 +2,7 @@ import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import RichTextToReact from 'rich-text-to-react';
 import { MARKS } from '@contentful/rich-text-types';
+import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import Divider from '@material-ui/core/Divider';
 
@@ -36,58 +37,84 @@ const About = () => {
           query={getAbout}
           render={data => {
             const { id, skills, upcoming } = data.aboutInfo.edges[0].node;
-            const { json } = data.aboutInfo.edges[0].node.aboutText;
+            const { json: aboutText } = data.aboutInfo.edges[0].node.aboutText;
 
             return (
-              <AboutContainer>
-                <AboutText>
-                  <RichTextToReact
-                    document={json}
-                    key={id}
-                    options={RichTextOptions}
-                  />
-                </AboutText>
-                <div>
-                  <Card
-                    style={{
-                      boxShadow:
-                        '0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)',
-                      padding: '30px'
-                    }}
-                  >
-                    <div>
-                      <h2>Skills</h2>
+              // <AboutContainer>
+              <Grid
+                container
+                spacing={10}
+                alignItems="flex-start"
+                style={{ padding: 2 }}
+              >
+                <Grid key={1} item xs={12} sm={12} lg={6} xl={6}>
+                  <AboutText>
+                    <Card
+                      style={{
+                        boxShadow:
+                          '0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)',
+                        padding: '30px'
+                      }}
+                    >
+                      <RichTextToReact
+                        document={aboutText}
+                        key={id}
+                        options={RichTextOptions}
+                      />
+                    </Card>
+                  </AboutText>
+                </Grid>
+                <Grid key={2} item xs={12} sm={12} lg={6} xl={6}>
+                  <div>
+                    <Card
+                      style={{
+                        boxShadow:
+                          '0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)',
+                        padding: '30px'
+                      }}
+                    >
+                      <div>
+                        <h2>Skills</h2>
+                        <SkillIntro>
+                          {' '}
+                          languages and technologies that I have worked with:
+                        </SkillIntro>
+                      </div>
+                      <Skills>
+                        {skills.map((skill, index) => {
+                          return (
+                            <span
+                              key={index}
+                              className={`${skill}-tag tech-tag`}
+                            >
+                              {skill}
+                            </span>
+                          );
+                        })}
+                      </Skills>
+                      <Divider style={{ marginBottom: '2rem' }} />
                       <SkillIntro>
-                        {' '}
-                        languages and technologies that I have worked with:
+                        Technologies I am currently learning or interested to
+                        learn in the short term future{' '}
                       </SkillIntro>
-                    </div>
-                    <Skills>
-                      {skills.map((skill, index) => {
-                        return (
-                          <span key={index} className={`${skill}-tag tech-tag`}>
-                            {skill}
-                          </span>
-                        );
-                      })}
-                    </Skills>
-                    <Divider style={{ marginBottom: '2rem' }} />
-                    <SkillIntro>
-                      Technologies I am currently learning or interested to
-                      learn in the short term future{' '}
-                    </SkillIntro>
-                    <Skills>
-                      {upcoming.map((skill, index) => {
-                        return (
-                          <span key={index} className={`${skill}-tag tech-tag`}>
-                            {skill}
-                          </span>
-                        );
-                      })}
-                    </Skills>
-                  </Card>
-                </div>
-              </AboutContainer>
+                      <Skills>
+                        {upcoming.map((skill, index) => {
+                          return (
+                            <span
+                              key={index}
+                              className={`${skill}-tag tech-tag`}
+                            >
+                              {skill}
+                            </span>
+                          );
+                        })}
+                      </Skills>
+                    </Card>
+                  </div>
+                </Grid>
+              </Grid>
+
+              // {/* </AboutContainer> */}
             );
           }}
         />
