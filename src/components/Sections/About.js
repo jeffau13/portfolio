@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from 'gatsby';
 import RichTextToReact from 'rich-text-to-react';
 import { MARKS } from '@contentful/rich-text-types';
 import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
+import Divider from '@material-ui/core/Divider';
 
 import styled from 'styled-components';
 import { Tags } from '../Tags';
@@ -18,6 +18,7 @@ const getAbout = graphql`
             json
           }
           skills
+          upcoming
         }
       }
     }
@@ -34,7 +35,7 @@ const About = () => {
         <StaticQuery
           query={getAbout}
           render={data => {
-            const { id, skills } = data.aboutInfo.edges[0].node;
+            const { id, skills, upcoming } = data.aboutInfo.edges[0].node;
             const { json } = data.aboutInfo.edges[0].node.aboutText;
 
             return (
@@ -56,14 +57,27 @@ const About = () => {
                   >
                     <div>
                       <h2>Skills</h2>
-                      <p>
+                      <SkillIntro>
                         {' '}
-                        Here's a list of languages and technologies that I have
-                        experience working with:
-                      </p>
+                        languages and technologies that I have worked with:
+                      </SkillIntro>
                     </div>
                     <Skills>
                       {skills.map((skill, index) => {
+                        return (
+                          <span key={index} className={`${skill}-tag tech-tag`}>
+                            {skill}
+                          </span>
+                        );
+                      })}
+                    </Skills>
+                    <Divider style={{ marginBottom: '2rem' }} />
+                    <SkillIntro>
+                      Technologies I am currently learning or interested to
+                      learn in the short term future{' '}
+                    </SkillIntro>
+                    <Skills>
+                      {upcoming.map((skill, index) => {
                         return (
                           <span key={index} className={`${skill}-tag tech-tag`}>
                             {skill}
@@ -111,6 +125,10 @@ const Skills = styled(Tags)`
     width: 90%;
     margin: auto;
   }
+`;
+
+const SkillIntro = styled.p`
+  font-size: 0.75em;
 `;
 
 const RichTextOptions = {
