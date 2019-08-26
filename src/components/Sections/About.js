@@ -30,9 +30,6 @@ const About = () => {
   return (
     <section id="about" className="three">
       <div className="container">
-        <header>
-          <h2>About Me</h2>
-        </header>
         <StaticQuery
           query={getAbout}
           render={data => {
@@ -40,7 +37,6 @@ const About = () => {
             const { json: aboutText } = data.aboutInfo.edges[0].node.aboutText;
 
             return (
-              // <AboutContainer>
               <Grid
                 container
                 spacing={10}
@@ -56,6 +52,7 @@ const About = () => {
                         padding: '30px'
                       }}
                     >
+                      <h2>About Me</h2>
                       <RichTextToReact
                         document={aboutText}
                         key={id}
@@ -113,8 +110,6 @@ const About = () => {
                   </div>
                 </Grid>
               </Grid>
-
-              // {/* </AboutContainer> */}
             );
           }}
         />
@@ -136,6 +131,12 @@ const AboutContainer = styled.div`
 
 const AboutText = styled.div`
   text-align: left;
+  h2 {
+    text-align: Center;
+  }
+  p {
+    font-size: 1.2rem;
+  }
 `;
 
 const Skills = styled(Tags)`
