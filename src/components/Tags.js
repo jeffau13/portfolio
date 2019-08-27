@@ -22,7 +22,8 @@ export const Tags = styled.div`
     background-color: #2e001f;
     color: #ffd9f2;
   }
-  .react-tag {
+  .react-tag,
+  .React.Native-tag {
     background-color: #222222;
     color: #58c0df;
   }
@@ -49,6 +50,22 @@ export const Tags = styled.div`
   .php-tag {
     background-color: #4d588f;
     color: #fff;
+  }
+  .postgresql-tag {
+    background-color: #245f8c;
+    color: #fff;
+  }
+  .firebase-tag {
+    background-color: #029be5;
+    color: #fbc02e;
+  }
+  .Angular-tag {
+    background-color: #dd0430;
+    color: #ffffff;
+  }
+  .Vue.js-tag {
+    background-color: #40b883;
+    color: #35495e;
   }
 
   .javascript {
