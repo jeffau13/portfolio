@@ -1,10 +1,10 @@
 {
   "name": "portfolio-jeff-au",
   "version": "0.0.1",
-  "description": "Porfolio for Jeff Au built with Gatsby.js, React, based on the theme \"prologue from HTML5UP ",
+  "description": "Portfolio for Jeff Au built with Gatsby.js, based on the theme \"prologue\" from HTML5UP ",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anubhavsrivastava/gatsby-starter-prologue.git"
+    "url": "git+https://github.com/jffau/portfolio.git"
   },
   "author": {
     "name": "Anubhav Srivastava, Jeff Au",
@@ -57,12 +57,13 @@
   },
   "keywords": [
     "gatsby",
-    "gatsby-starter",
-    "gatsby-starter-prologue"
+    "portfolio",
+    "Jeff Au",
+    "front end engineer"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/anubhavsrivastava/gatsby-starter-prologue/issues"
+    "url": "https://github.com/jffau/portfolio/issues"
   },
-  "homepage": "https://github.com/anubhavsrivastava/gatsby-starter-prologue#readme"
+  "homepage": "https://jeffau.dev"
 }
