@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from '@material-ui/core/Card';
-import RichTextToReact from 'rich-text-to-react';
+import RichText from 'rich-text-to-react';
 import { MARKS } from '@contentful/rich-text-types';
 import styled from 'styled-components';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
@@ -81,7 +81,7 @@ const ProjectCard = props => {
             </ExpansionPanelSummary>
             <ExpansionPanelDetails>
               <Description>
-                <RichTextToReact document={json} options={RichTextOptions} />
+                <RichText document={json} options={RichTextOptions} />
               </Description>
             </ExpansionPanelDetails>
             <Divider />

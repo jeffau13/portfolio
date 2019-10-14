@@ -1,9 +1,17 @@
 import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
+import RichText from 'rich-text-to-react';
+import { MARKS } from '@contentful/rich-text-types';
+
 import Scroll from '../Scroll';
+
+// MUI
 import Divider from '@material-ui/core/Divider';
 import Card from '@material-ui/core/Card';
 import Button from '@material-ui/core/Button';
+
+// icons:
 import {
   faGithub,
   faLinkedin,
@@ -11,7 +19,25 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelopeOpen } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 const Intro = () => {
+  const data = useStaticQuery(graphql`
+    {
+      getIntro: allContentfulPortfolioInfo {
+        edges {
+          node {
+            introText {
+              id
+              json
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  const { json } = data.getIntro.edges[0].node.introText;
+
   return (
     <section id="top" className="intro">
       <div className="container">
@@ -28,21 +54,7 @@ const Intro = () => {
           <IntroDiv className="intro-container">
             <div style={{ width: '80%' }}>
               <header>
-                <h3>
-                  <span role="img" aria-label="wave">
-                    👋
-                  </span>{' '}
-                  Welcome to my portfolio!
-                  <br />
-                </h3>
-                <h3>
-                  My name is <span className="text-red">Jeff Au</span>
-                </h3>
-                <p>
-                  I am a <span className="text-red">frontend javascript </span>{' '}
-                  developer
-                  <br />
-                </p>
+                <RichText document={json} options={RichTextOptions} />
               </header>
             </div>
             <div style={{ flexGrow: 1 }}>
@@ -110,5 +122,15 @@ const SocialIcons = styled.div`
     margin: auto;
   }
 `;
+
+const RichTextOptions = {
+  renderMark: {
+    [MARKS.BOLD]: (text, key) => (
+      <span key={key} className="text-red">
+        {text}
+      </span>
+    )
+  }
+};
 
 export default Intro;
