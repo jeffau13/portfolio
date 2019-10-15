@@ -40,7 +40,7 @@ const About = () => {
               <Grid
                 container
                 spacing={10}
-                alignItems="flex-start"
+                alignItems="center"
                 style={{ padding: 2 }}
               >
                 <Grid key={1} item xs={12} sm={12} lg={6} xl={6}>
