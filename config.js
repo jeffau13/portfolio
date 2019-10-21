@@ -20,7 +20,7 @@ module.exports = {
     {
       icon: 'fa-file',
       name: 'Resume',
-      url: 'https://www.dropbox.com/s/jludrkpo1w6ntkr/resume.pdf?dl=1'
+      url: 'https://www.dropbox.com/s/ghrzls0g1hlgqet/JeffAuResume.pdf?dl=1'
     },
     {
       icon: 'fa-envelope-o',

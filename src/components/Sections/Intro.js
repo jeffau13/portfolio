@@ -70,7 +70,7 @@ const Intro = () => {
                 </a>
               </Scroll>
 
-              <a href="https://www.dropbox.com/s/jludrkpo1w6ntkr/resume.pdf?dl=1">
+              <a href="https://www.dropbox.com/s/ghrzls0g1hlgqet/JeffAuResume.pdf?dl=1">
                 <Button
                   variant="contained"
                   color="primary"
