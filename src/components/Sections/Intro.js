@@ -10,6 +10,7 @@ import Scroll from '../Scroll';
 import Divider from '@material-ui/core/Divider';
 import Card from '@material-ui/core/Card';
 import Button from '@material-ui/core/Button';
+import Tooltip from '@material-ui/core/Tooltip';
 
 // icons:
 import {
@@ -85,20 +86,27 @@ const Intro = () => {
           <div className="socialLinks">
             <Divider />
             <SocialIcons>
-              <a href="https://github.com/jffau">
-                <FontAwesomeIcon icon={faGithub} size="lg" />
-              </a>
-              <a href="https://instagram.com/jeffau.dev">
+              <Tooltip title="Github">
+                <a href="https://github.com/jffau">
+                  <FontAwesomeIcon icon={faGithub} size="lg" />
+                </a>
+              </Tooltip>
+
+              {/* <a href="https://instagram.com/jeffau.dev">
                 <FontAwesomeIcon icon={faInstagram} size="lg" />
-              </a>
-              <a href="https://www.linkedin.com/in/jffau">
-                <FontAwesomeIcon icon={faLinkedin} size="lg" />
-              </a>
-              {/* <Scroll type="id" element={'contact'}> */}
-              <a href="mailto:jeffau.dev@gmail.com">
-                <FontAwesomeIcon icon={faEnvelopeOpen} size="lg" />
-              </a>
-              {/* </Scroll> */}
+              </a> */}
+
+              <Tooltip title="LinkedIn">
+                <a href="https://www.linkedin.com/in/jffau">
+                  <FontAwesomeIcon icon={faLinkedin} size="lg" />
+                </a>
+              </Tooltip>
+
+              <Tooltip title="Email me (jeffau13@gmail.com)">
+                <a href="mailto:jeffau.dev@gmail.com">
+                  <FontAwesomeIcon icon={faEnvelopeOpen} size="lg" />
+                </a>
+              </Tooltip>
             </SocialIcons>
           </div>
         </Card>
