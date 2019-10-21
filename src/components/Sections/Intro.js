@@ -102,7 +102,7 @@ const Intro = () => {
                 </a>
               </Tooltip>
 
-              <Tooltip title="Email me (jeffau13@gmail.com)">
+              <Tooltip title="Contact me (jeffau13@gmail.com)">
                 <a href="mailto:jeffau.dev@gmail.com">
                   <FontAwesomeIcon icon={faEnvelopeOpen} size="lg" />
                 </a>

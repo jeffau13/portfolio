@@ -15,17 +15,20 @@ module.exports = {
     {
       icon: 'fa-github',
       name: 'Github',
-      url: 'https://github.com/jffau'
+      url: 'https://github.com/jffau',
+      tooltip: 'github'
     },
     {
       icon: 'fa-file',
       name: 'Resume',
-      url: 'https://www.dropbox.com/s/ghrzls0g1hlgqet/JeffAuResume.pdf?dl=1'
+      url: 'https://www.dropbox.com/s/ghrzls0g1hlgqet/JeffAuResume.pdf?dl=1',
+      tooltip: 'view resume'
     },
     {
       icon: 'fa-envelope-o',
       name: 'Email',
-      url: 'mailto:jeffau13@gmail.com'
+      url: 'mailto:jeffau13@gmail.com',
+      tooltip: 'contact me (jeffau13@gmail.com)'
     }
   ]
 };
