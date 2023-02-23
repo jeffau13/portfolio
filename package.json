@@ -7,8 +7,8 @@
     "url": "git+https://github.com/jffau/portfolio.git"
   },
   "author": {
-    "name": "Anubhav Srivastava, Jeff Au",
-    "email": "anubhav.srivastava00@gmail.com, jeffau13@gmail.com"
+    "name": "Jeff Au",
+    "email": "jeffau13@gmail.com"
   },
   "dependencies": {
     "@contentful/rich-text-types": "^13.4.0",
@@ -30,7 +30,6 @@
     "gatsby-plugin-sass": "^2.1.4",
     "gatsby-plugin-styled-components": "^3.1.2",
     "gatsby-source-contentful": "^2.1.18",
-    "node-sass": "^7.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
@@ -65,5 +64,5 @@
   "bugs": {
     "url": "https://github.com/jffau/portfolio/issues"
   },
-  "homepage": "https://jeffau.dev"
+  "homepage": "https://jeffau.com"
 }
